@@ -115,7 +115,7 @@ main {
 }
 
 .grid-1 {
-  background-image: url("https://abdelrahman-almansory.github.io/assets/images/image-web-3-mobile.jpg");
+  background-image: url("../assets/images/image-web-3-mobile.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   flex-basis: 300px;
