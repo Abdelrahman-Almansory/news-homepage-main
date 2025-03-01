@@ -1,0 +1,296 @@
+:root {
+  /* Colors */
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  --off-white: hsl(36, 100%, 99%);
+  --Grayish-blue: hsl(233, 8%, 79%);
+  --Dark-grayish-blue: hsl(236, 13%, 42%);
+  --Very-dark-blue: hsl(240, 100%, 5%);
+  /* Font weight */
+  --fw-sm: 400;
+  --fw-lg: 700;
+  --fw-xl: 800;
+}
+
+/* Css Reset */
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+/* p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+} */
+
+/* 8. Improve line wrapping */
+/* p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+} */
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  min-height: 100dvh;
+  overflow-x: hidden;
+  background-color: var(--off-white);
+  font-family: "Inter", serif;
+}
+
+main {
+  height: 100%;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  height: 100dvh;
+  width: 100%;
+  z-index: 99;
+  transition: all 0.3s ease-in-out;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.grid-container {
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.grid-1 {
+  background-image: url("/assets/images/image-web-3-mobile.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex-basis: 300px;
+  background-size: 100%;
+}
+
+.grid-2 h1 {
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: var(--fw-xl);
+  padding-right: 6rem;
+}
+
+.grid-3,
+.grid-4 {
+  margin-bottom: 2rem;
+}
+
+.grid-3 p {
+  color: var(--Dark-grayish-blue);
+  margin-bottom: 1rem;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  background-color: var(--soft-red);
+  border: none;
+  color: var(--Very-dark-blue);
+  font-weight: var(--fw-lg);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--Very-dark-blue);
+  color: var(--off-white);
+}
+
+.grid-4 {
+  padding: 1rem;
+  background-color: var(--Very-dark-blue);
+  color: var(--off-white);
+}
+
+.grid-4 h2 {
+  color: var(--soft-orange);
+  margin-bottom: 1.5rem;
+}
+
+.grid-4 h3 {
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: color 0.15s ease-in-out;
+}
+
+.grid-4 h3:hover {
+  color: var(--soft-orange);
+}
+
+.grid-4 p {
+  color: var(--Grayish-blue);
+  margin-bottom: 2rem;
+}
+
+.grid-4 hr {
+  margin-bottom: 2rem;
+}
+
+.grid-5 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.grid-5 .card {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  gap: 1rem;
+}
+
+.card img {
+  height: 8rem;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card .card-desc {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-desc .num {
+  font-size: 2.2rem;
+  font-weight: var(--fw-lg);
+  color: var(--soft-red);
+}
+
+.card-desc .card-title {
+  font-weight: var(--fw-xl);
+  font-size: 1.1rem;
+}
+
+.card-desc .card-info {
+  font-size: 15px;
+  color: var(--Dark-grayish-blue);
+  font-weight: var(--fw-sm);
+}
+
+@media (min-width: 900px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid-1 {
+    grid-area: 1 / 1 / 3 / 2;
+  }
+
+  .grid-5 {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    padding: 1rem 4rem;
+  }
+
+  header {
+    padding-inline: 4rem;
+  }
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fit, 200px);
+    gap: 2rem;
+  }
+
+  .grid-1 {
+    grid-area: 1 / 1 / 3 / 3;
+    background-image: url(/assets/images/image-web-3-desktop.jpg);
+  }
+
+  .grid-2 {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+
+  .grid-2 h1 {
+    font-size: 4rem;
+  }
+
+  .grid-3 {
+    grid-area: 3 / 2 / 4 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .grid-3 p {
+    line-height: 2;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+
+  .grid-4 {
+    grid-area: 1 / 3 / 4 / 4;
+  }
+
+  .grid-5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem;
+    grid-area: 4 / 1 / 5 / 4;
+  }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | News homepage</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <figure class="logo">
+          <img src="assets/images/logo.svg" alt="Logo Icon" />
+        </figure>
+        <div class="nav">
+          <ul class="navbar">
+            <li class="navlist"><a href="#">Home</a></li>
+            <li class="navlist"><a href="#">News</a></li>
+            <li class="navlist"><a href="#">Popular</a></li>
+            <li class="navlist"><a href="#">Trending</a></li>
+            <li class="navlist"><a href="#">Categories</a></li>
+          </ul>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <ul class="sidebar hidden">
+          <li class="navlist"><a href="#">Home</a></li>
+          <li class="navlist"><a href="#">News</a></li>
+          <li class="navlist"><a href="#">Popular</a></li>
+          <li class="navlist"><a href="#">Trending</a></li>
+          <li class="navlist"><a href="#">Categories</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="overlay hidden"></div>
+      <div class="grid-container">
+        <div class="grid-card grid-1"></div>
+        <div class="grid-card grid-2">
+          <h1>The Bright Future of Web 3.0?</h1>
+        </div>
+        <div class="grid-card grid-3">
+          <p>
+            We dive into the next evolution of the web that claims to put the
+            power of the platforms back into the hands of the people. But is it
+            really fulfilling its promise?
+          </p>
+          <button class="btn">Read more</button>
+        </div>
+        <div class="grid-card grid-4">
+          <h2>New</h2>
+          <h3>Hydrogen VS Electric Cars</h3>
+          <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          <hr />
+          <h3>The Downsides of AI Artistry</h3>
+          <p>
+            What are the possible adverse effects of on-demand AI image
+            generation?
+          </p>
+          <hr />
+          <h3>Is VC Funding Drying Up?</h3>
+          <p>
+            Private funding by VC firms is down 50% YOY. We take a look at what
+            that means.
+          </p>
+        </div>
+        <div class="grid-card grid-5">
+          <div class="card">
+            <img src="assets/images/image-retro-pcs.jpg" alt="Retro PC" />
+            <div class="card-desc">
+              <div class="num">01</div>
+              <div class="card-title">Reviving Retro PCs</div>
+              <div class="card-info">
+                What happens when old PCs are given modern upgrades?
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="assets/images/image-top-laptops.jpg"
+              alt="laptop keyboard"
+            />
+            <div class="card-desc">
+              <div class="num">02</div>
+              <div class="card-title">Top 10 Laptops of 2022</div>
+              <div class="card-info">
+                Our best picks for various needs and budgets.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="assets/images/image-gaming-growth.jpg"
+              alt="Console controller"
+            />
+            <div class="card-desc">
+              <div class="num">03</div>
+              <div class="card-title">The Growth of Gaming</div>
+              <div class="card-info">
+                How the pandemic has sparked fresh opportunities.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--        
+             -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
